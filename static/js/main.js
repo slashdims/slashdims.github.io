@@ -143,11 +143,10 @@ $(document).ready(function () {
 //   $(this).toggleClass('fast');
 //   $('.header__nav').slideToggle("fast");
 // });
-$(document).ready(function(){
+$(window).load(function(){
   $('.services-slider').bxSlider({
     mode: 'horizontal',
 		speed: 800,
-		// adaptiveHeight: true,
 		adaptiveWidth: true,
 		responsive: true,
 		preventDefaultSwipeY: true,
@@ -163,6 +162,38 @@ $(document).ready(function(){
 		slideMargin: 5
   });
 });  
+$(window).load(function() {
+  $('.reviews-slider').bxSlider({
+    mode: 'horizontal',
+		speed: 800,
+		adaptiveWidth: true,
+		responsive: true,
+		preventDefaultSwipeY: true,
+		keyboardEnabled: true,
+		nextSelector: '#next',
+		prevSelector: '#prev',
+		prevText: '',   
+		nextText: '',
+		minSlides: 1,
+		maxSlides: 1,
+		slideWidth: 800,
+		slideMargin: 5
+  });
+});
+$(window).load(function() {
+  $('.mobile-slider').bxSlider({
+    mode: 'horizontal',
+		speed: 800,
+		adaptiveWidth: true,
+		adaptiveHeight: true,
+		responsive: true,
+		keyboardEnabled: true,
+		minSlides: 1,
+		maxSlides: 1,
+		// slideWidth: 800,
+		slideMargin: 5
+  });
+});
 
 
 
