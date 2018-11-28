@@ -217,13 +217,11 @@ $(window).load(function() {
 let statusMessage = document.createElement('div');
 
 input = document.querySelectorAll('input');
-    console.log(input)
-
-
 
 document.body.addEventListener('submit', (e) => { 
-    e.preventDefault();
     let target = e.target;
+    e.preventDefault();
+
    
 });
 $(document).ready(function() {
