@@ -137,19 +137,38 @@ $(document).ready(function () {
 
 	});
 });
-// Mobile nav
+// // Mobile nav
 // $('#mobile-menu-button').on('click', function(event) {
 //   event.preventDefault();
 //   $(this).toggleClass('fast');
 //   $('.header__nav').slideToggle("fast");
 // });
+$(document).ready(function () {
+    $('.sandwich').click(function(){
+		var menu = $('.mobile');
+		$(this).toggleClass('active');
+		if(menu.is(':visible')) {
+			menu.slideUp();
+		}else{
+			menu.slideDown();
+		}
+
+  $(".mobile-nav__link").click(function() {
+    var elementClick = $(this).attr("href")
+    var destination = $(elementClick).offset().top;
+    jQuery("html:not(:animated),body:not(:animated)").animate({
+      scrollTop: destination
+    }, 1000);
+    return false;
+	})
+})
+//bx-slider
 $(window).load(function(){
   $('.services-slider').bxSlider({
     mode: 'horizontal',
 		speed: 800,
 		adaptiveWidth: true,
 		responsive: true,
-		preventDefaultSwipeY: true,
 		keyboardEnabled: true,
 		nextSelector: '#pronext',
 		prevSelector: '#proprev',
@@ -159,7 +178,8 @@ $(window).load(function(){
 		minSlides: 1,
 		maxSlides: 1,
 		slideWidth: 600,
-		slideMargin: 5
+		slideMargin: 5,
+		startSlide: 0
   });
 });  
 $(window).load(function() {
@@ -168,7 +188,6 @@ $(window).load(function() {
 		speed: 800,
 		adaptiveWidth: true,
 		responsive: true,
-		preventDefaultSwipeY: true,
 		keyboardEnabled: true,
 		nextSelector: '#next',
 		prevSelector: '#prev',
@@ -177,24 +196,24 @@ $(window).load(function() {
 		minSlides: 1,
 		maxSlides: 1,
 		slideWidth: 800,
-		slideMargin: 5
+		slideMargin: 5,
+		startSlide: 0
   });
 });
 $(window).load(function() {
-  $('.mobile-slider').bxSlider({
-    mode: 'horizontal',
-		speed: 800,
-		adaptiveWidth: true,
-		adaptiveHeight: true,
-		responsive: true,
-		keyboardEnabled: true,
-		minSlides: 1,
-		maxSlides: 1,
-		// slideWidth: 800,
-		slideMargin: 5
-  });
+	$('.mobile-slider').bxSlider({
+	  mode: 'horizontal',
+	  controls: false,
+	  pager: false,
+	  speed: 800,
+	  adaptiveWidth: true,
+	  responsive: true,
+	  keyboardEnabled: true,
+	  minSlides: 1,
+	  maxSlides: 1,
+	  slideWidth: 800,
+		slideMargin: 5,
+		startSlide: 0
+		});
+	});
 });
-
-
-
- 
