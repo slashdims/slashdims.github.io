@@ -35,7 +35,10 @@
                     <svg class="icon icon-vk ">
                       <use xlink:href="static/img/svg/symbol/sprite.svg#vk"></use>
                     </svg></a></li>
-                <li class="nav-soc__item"><a class="nav-soc__link" href="https://www.avito.ru/respublika" target="_blank"><img src="static/img/content/avito.png" alt=""></a></li>
+                <li class="nav-soc__item"><a class="nav-soc__link" href="https://www.avito.ru/respublika" target="_blank">
+                    <svg class="icon icon-avito ">
+                      <use xlink:href="static/img/svg/symbol/sprite.svg#avito"></use>
+                    </svg></a></li>
               </ul>
             </div>
           </div>
@@ -48,22 +51,22 @@
             </svg>
           </div>
           <nav class="mobile">
-            <ul class="mobile-nav">
-              <li class="mobile-nav__item "><a class="mobile-nav__link" href="#general">Главная</a></li>
-              <li class="mobile-nav__item "><a class="mobile-nav__link" href="#services">Услуги</a></li>
-              <li class="mobile-nav__item "><a class="mobile-nav__link" href="#strength">Преимущества</a></li>
-              <li class="mobile-nav__item "><a class="mobile-nav__link" href="#reviews">Отзывы</a></li>
-              <li class="mobile-nav__item "><a class="mobile-nav__link" href="#contacts">Контакты</a></li>
-            </ul>
+            <div class="header-phone"><a class="phone" href="tel:+79217270390">8(921) 727-03-90</a><a class="consult" href="#form">Бесплатная консультация</a></div>
+            <div class="mobile-container">
+              <ul class="mobile-nav">
+                <li class="mobile-nav__item "><a class="mobile-nav__link" href="#general">Главная</a></li>
+                <li class="mobile-nav__item "><a class="mobile-nav__link" href="#services">Услуги</a></li>
+                <li class="mobile-nav__item "><a class="mobile-nav__link" href="#strength">Преимущества</a></li>
+                <li class="mobile-nav__item "><a class="mobile-nav__link" href="#reviews">Отзывы</a></li>
+                <li class="mobile-nav__item "><a class="mobile-nav__link" href="#contacts">Контакты</a></li>
+              </ul>
+            </div>
             <div class="header-nav__soc">
               <ul class="nav-soc">
+                <li class="nav-soc__item"></li><a class="nav-soc__link" href="https://www.avito.ru/respublika" target="_blank"><img src="static/img/content/avito.png" alt=""/></a>
                 <li class="nav-soc__item"><a class="nav-soc__link" href="https://vk.com/club29519563" target="_blank">
                     <svg class="icon icon-vk ">
                       <use xlink:href="static/img/svg/symbol/sprite.svg#vk"></use>
-                    </svg></a></li>
-                <li class="nav-soc__item"><a class="nav-soc__link" href="https://www.avito.ru/respublika" target="_blank">
-                    <svg class="icon icon-avito ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#avito"></use>
                     </svg></a></li>
               </ul>
             </div>
@@ -242,22 +245,22 @@
             </div>
             <div class="form-group form-group--name"> 
               <label class="form-label">Ваше имя:</label>
-              <input class="form-control" id="name" type="name" name="name" placeholder="Ваше имя" tabindex="1" required>
+              <input class="form-control" id="name" type="name" name="name" placeholder="Ваше имя" tabindex="1" required onKeyUp="if(/[^a-zA-Zа-яА-ЯёЁ .]/i.test(this.value)){this.value='';}">
             </div>
             <div class="form-group form-group--phone">
               <label class="form-label">Телефон:</label>
-              <input class="form-control" id="phone" type="text" name="phone" placeholder="Телефон:" tabindex="2" required>
+              <input class="form-control" id="phone" name="phone" placeholder="Телефон:" tabindex="2" required onkeyup="this.value = this.value.replace (/[^0-9+]/g, '')">
             </div>
             <div class="form-group form-group--text">
               <label class="form-label">Тема заявки:</label>
-              <input class="form-control" id="text" type="text" name="tema" placeholder="Тема заявки:" tabindex="3" required>
+              <input class="form-control" id="text" type="text" name="tema" placeholder="Тема заявки:" tabindex="3" required onKeyUp="if(/[^a-zA-Zа-яА-ЯёЁ .]/i.test(this.value)){this.value='';}">
             </div>
             <div class="form-group form-group--checkbox">
               <label class="form-label form-label--checkbox">
                 <input class="checkbox form-control" id="check" type="checkbox" name="form-check"><span class="checkbox-custom"></span><span class="label desctop">Даю свое согласие на обработку персональных данных</span><span class="label-mobile">Cогласие на обработку персональных данных</span>
               </label>
             </div>
-            <button class="general-button general-button--mod"><a class="general-button__link" href="">Отправить заявку</a></button>
+            <button class="general-button general-button--mod"><a class="general-button__link">Отправить заявку</a></button>
           </form>
         </div>
         <div class="map__container"> 
@@ -311,6 +314,13 @@
           </div>
         </footer><span class="copyright">Все права защищены. АН Республика. 2018 г.</span>
       </section>
+      <div class="overlay">
+        <div class="popup">
+          <div class="popup-close"><img style="height:30px" src="static/img/content/close.png" alt="close"></div>
+          <h3 class="popup-title">Спасибо за Ваше обращение!</h3>
+          <p class="popup-text">Ваша заявка отправлена. Наши специалисты свяжутся с Вами в ближайшее время</p>
+        </div>
+      </div>
     </div>
     <script src="static/js/jquery.js"></script>
     <script src="static/js/libs.min.js"></script>
