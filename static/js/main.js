@@ -1,6 +1,19 @@
-// $(document).ready(function () {
-// 	svg4everybody({});
+// document.body.addEventListener('click', e => {   
+//     let target = e.target;
+//     if (target && target.matches('a[href*="#"]')) {
+//     e.preventDefault();
+
+//     const blockID = target.getAttribute("href");
+//     document.querySelector("" + blockID).scrollIntoView({
+//         block: "start",
+//         behavior: "smooth"
+//     });
+// }
 // });
+
+$(document).ready(function () {
+	svg4everybody({});
+});
 function cislo(){
 	if (event.keyCode < 48 || event.keyCode > 57)
 	event.returnValue= false;
@@ -140,6 +153,11 @@ $(".toggle").on("click", function (e) {
 
 });
 });
+
+//Magnific-popup
+$('.popup-link').magnificPopup({
+	type:'inline'
+});
 //Mobile-menu
 $(document).ready(function () {
 	$('.sandwich').click(function(){
@@ -165,7 +183,7 @@ $(".mobile-nav__link").click(function() {
 $(window).load(function(){
 $('.services-slider').bxSlider({
 	mode: 'horizontal',
-	speed: 800,
+	touchDrag: false,
 	adaptiveWidth: true,
 	responsive: true,
 	keyboardEnabled: true,
@@ -181,42 +199,8 @@ $('.services-slider').bxSlider({
 	startSlide: 0
 });
 });  
-// $(window).load(function() {
-// $('.reviews-slider').bxSlider({
-// 	mode: 'horizontal',
-// 	speed: 800,
-// 	adaptiveWidth: true,
-// 	responsive: true,
-// 	keyboardEnabled: true,
-// 	nextSelector: '#next',
-// 	prevSelector: '#prev',
-// 	prevText: '',   
-// 	nextText: '',
-// 	minSlides: 1,
-// 	maxSlides: 1,
-// 	slideWidth: 800,
-// 	slideMargin: 5,
-// 	startSlide: 0
-// });
-// });
-// $(window).load(function() {
-// $('.mobile-slider').bxSlider({
-// 	mode: 'horizontal',
-// 	controls: false,
-// 	pager: false,
-// 	speed: 800,
-// 	adaptiveWidth: true,
-// 	responsive: true,
-// 	keyboardEnabled: true,
-// 	minSlides: 1,
-// 	maxSlides: 1,
-// 	slideWidth: 800,
-// 	slideMargin: 5,
-// 	startSlide: 0
-// 	});
-// });
 });
-//Popup
+//Popup overlay
 let popup = document.querySelector('.overlay')
 
 let popupClose = document.querySelector('.popup-close')
@@ -237,10 +221,18 @@ popup.addEventListener('click', (e)=>{
 popupClose.addEventListener('click', (e)=>{
 	popup.style.display = 'none'; 
 });
-//form
-
-
+//Popup form
+let pop = document.querySelector('.overlay')
 input = document.querySelectorAll('input');
+document.body.addEventListener('.general-button', (e) => {  
+	popup.style.display = 'block';
+	e.preventDefault();
+	for(let i = 0; i < input.length; i++){
+							input[i].value = '';
+	}
+});
+
+//form
 
 document.body.addEventListener('submit', (e) => { 
 let target = e.target;
@@ -271,24 +263,24 @@ for(let i = 0; i < input.length; i++){
 }
 });
 $(function(){
-		$('#form').validate({
+		$('#formID').validate({
 			rules:{
 	
 				name:{
 						required: true,
 						minlength: 2,
-						maxlength: 16,
+						maxlength: 30,
 				},
 	
 				phone:{
 						required: true,
 						minlength: 5,
-						maxlength: 16,
+						maxlength: 30,
 				},
 				tema:{
 					required: true,
 					minlength: 6,
-					maxlength: 16,
+					maxlength: 40,
 			}
 	 },
 		 messages: {
@@ -308,8 +300,9 @@ $(function(){
 		});
 	 }); 
 	
-	 $('.reviews-slider').slick(
-	
+	 $('.reviews-slider').slick( {
+		arrows: false
+	 }
 	);
 	$('#next').on('click', function() {
 		$('.reviews-slider').slick('slickNext');
@@ -317,9 +310,21 @@ $(function(){
 	$('#prev').on('click', function() {
 		$('.reviews-slider').slick('slickPrev');
 	});	
-	$('.mobile-slider').slick(
-	
+	$('.mobile-slider').slick({
+		arrows: false
+		}
 	);
-	// $('.mobile-slider').slick({
-			
-	// });
+
+	$(document).ready(function(){
+		$("#formID").submit(function() { //устанавливаем событие отправки для формы с id=form
+				var form_data = $(this).serialize(); //собераем все данные из формы
+				$.ajax({
+				type: "POST", //Метод отправки
+				url: "/mail.php", //путь до php фаила отправителя
+				data: form_data ,
+				success: function() {
+					   //код в этом блоке выполняется при успешной отправке сообщения
+					   alert("Ваше сообщение отправлено!");
+				}
+	});
+	}); });
