@@ -22,11 +22,11 @@
           <div class="header__nav-container">
             <nav class="header__nav">
               <ul class="nav-list" id="menu">
-                <li class="nav-list__item nav-list__item active"><a class="nav-list__link" href="#general">Главная</a></li>
-                <li class="nav-list__item "><a class="nav-list__link" href="#services">Услуги</a></li>
-                <li class="nav-list__item "><a class="nav-list__link" href="#strength">Преимущества</a></li>
-                <li class="nav-list__item "><a class="nav-list__link" href="#reviews">Отзывы</a></li>
-                <li class="nav-list__item "><a class="nav-list__link" href="#contacts">Контакты</a></li>
+                <li class="nav-list__item"><a class="nav-list__link nav-list__item active1" href="#general">Главная</a></li>
+                <li class="nav-list__item"><a class="nav-list__link " href="#services">Услуги</a></li>
+                <li class="nav-list__item"><a class="nav-list__link " href="#strength">Преимущества</a></li>
+                <li class="nav-list__item"><a class="nav-list__link " href="#reviews">Отзывы</a></li>
+                <li class="nav-list__item"><a class="nav-list__link1" href="#contacts" id="contacts">Контакты</a></li>
               </ul>
             </nav>
             <div class="header-nav__soc">
@@ -58,7 +58,8 @@
                 <li class="mobile-nav__item "><a class="mobile-nav__link" href="#services">Услуги</a></li>
                 <li class="mobile-nav__item "><a class="mobile-nav__link" href="#strength">Преимущества</a></li>
                 <li class="mobile-nav__item "><a class="mobile-nav__link" href="#reviews">Отзывы</a></li>
-                <li class="mobile-nav__item "><a class="mobile-nav__link" href="#contacts">Контакты</a></li>
+                <li class="mobile-nav__item "><a class="mobile-nav__link" href="#contact">Контакты</a></li>
+                <li class="mobile-nav__item "><a class="mobile-nav__link"></a></li>
               </ul>
             </div>
             <div class="header-nav__soc">
@@ -237,7 +238,7 @@
         </div>
       </section>
       <div class="padding" id="form-section"></div>
-      <section class="section map">
+      <section class="section map" id="contacts">
         <div class="form-container">
           <form class="form" id="formID" name="form">
             <div class="form-title"> 
@@ -267,7 +268,7 @@
           <div class="map__object" id="map"></div>
         </div>
       </section>
-      <section class="section section-footer welcome__container" id="contacts">
+      <section class="section section-footer welcome__container" id="contact">
         <footer>
           <div class="container welcome-text">
             <div class="footer-logo"><a class="logo" href="/" title="Республика недвижимости" style="background-image: url(static/img/general/ramka_swirl.png);">   </a></div>
@@ -280,12 +281,12 @@
             <p> РК, г. Петрозаводск, ул. Правды, д. 6		</p>
           </div>
           <div class="container welcome-desc">
-            <address class="address">Адрес: Республика Карелия, г. Петрозаводск, ул. Правды, д. 6  </address>
+            <address class="address">Адрес: Республика Карелия,<span>г. Петрозаводск, ул. Правды, д. 6  </span></address>
             <div class="footer-list">
               <ul class="footer-office__list"> 
                 <li class="footer-office__item">Офис:</li>
-                <li class="footer-office__item">(8142)445-007</li>
-                <li class="footer-office__item">(8142) 57-42-99</li>
+                <li class="footer-office__item">(8142) 445-007</li>
+                <li class="footer-office__item">(8142) 574-299</li>
               </ul>
               <ul class="footer-consultation__list"> 
                 <li class="footer-consultation__item">Консультации:</li>
@@ -330,6 +331,7 @@
     <script src="static/js/libs.min.js"></script>
     <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyAIQyrHP2oEDlsUF8AJmyd9R0vtRDKlOo8&amp;amp;sensor=false&amp;amp;language=en&amp;amp;ver=4.6.12"></script>
     <script src="static/js/main.js"></script>
+    <script src="static/js/fix.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
   </body>
 </html>
