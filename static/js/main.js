@@ -100,6 +100,27 @@ $(window).load(function(){
 		
 			});
 		});  
+$(window).load(function(){
+	$('.services-slider').bxSlider({
+				mode: 'horizontal',
+				speed: 500,
+				pause: 500,
+				touchDrag: false,
+				adaptiveWidth: true,
+				responsive: true,
+				keyboardEnabled: true,
+				nextSelector: '#pronext',
+				prevSelector: '#proprev',
+				pagerCustom: '#bx-pager',
+				prevText: '',   
+				nextText: '',
+				minSlides: 1,
+				maxSlides: 1,
+				slideWidth: 600,
+				slideMargin: 5
+		
+		});
+});   
 google.maps.event.addDomListener(window, "load", initMap);
 
 $(document).ready(function () {

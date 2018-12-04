@@ -2,17 +2,16 @@
 <html lang="ru-RU">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=2">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta property="og:image" content="path/to/image.jpg">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href=" https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css ">
     <link rel="stylesheet" type="text/css" href="static/css/main.css"><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
-    <title>Главная страница </title>
+    <title>Главная страница    </title>
   </head>
   <body>
     <div class="wrapper">
@@ -54,12 +53,11 @@
             <div class="header-phone"><a class="phone" href="tel:+79217270390">8(921) 727-03-90</a><a class="consult" href="#form-section">Бесплатная консультация</a></div>
             <div class="mobile-container">
               <ul class="mobile-nav">
-                <li class="mobile-nav__item "><a class="mobile-nav__link" href="#general">Главная</a></li>
+                <li class="mobile-nav__item mobile-nav__item active"><a class="mobile-nav__link" href="#general">Главная</a></li>
                 <li class="mobile-nav__item "><a class="mobile-nav__link" href="#services">Услуги</a></li>
                 <li class="mobile-nav__item "><a class="mobile-nav__link" href="#strength">Преимущества</a></li>
                 <li class="mobile-nav__item "><a class="mobile-nav__link" href="#reviews">Отзывы</a></li>
                 <li class="mobile-nav__item "><a class="mobile-nav__link" href="#contact">Контакты</a></li>
-                <li class="mobile-nav__item "><a class="mobile-nav__link"></a></li>
               </ul>
             </div>
             <div class="header-nav__soc">
@@ -95,13 +93,15 @@
         <div class="our-services__right">
           <h2 class="our-services__title">Наши услуги</h2>
           <nav class="nav-list" id="bx-pager">
+            <div class="fix-touch"></div>
+            <div class="fix-touch2"></div>
             <ul class="nav-list-services">
               <li class="nav-list-services__item"><a class="nav-list-services__link" data-slide-index="0" href="">Продажа</a></li>
-              <li class="nav-list-services__item"><a class="nav-list-services__link" data-slide-index="1" href="">Покупка</a></li>
-              <li class="nav-list-services__item"><a class="nav-list-services__link" data-slide-index="2" href="">Другие</a></li>
+              <li class="nav-list-services__item"><a class="nav-list-services__link nav-list-services__link--mod" data-slide-index="1" href="">Покупка</a></li>
+              <li class="nav-list-services__item"><a class="nav-list-services__link nav-list-services__link--mod1" data-slide-index="2" href="">Другие</a></li>
             </ul>
           </nav>
-          <div class="services-list">
+          <div class="services-list service-list__mobile">
             <div class="services-slider">
               <ul class="services-list__nav">
                 <li class="services-list__item note">Профессиональная оценка объекта недвижимости</li>
@@ -110,12 +110,12 @@
                 <li class="services-list__item key">Организация и проведение сделки купли-продажи <br>(от составления договоров до передачи ключей покупателям )</li>
               </ul>
               <ul class="services-list__nav">
-                <li class="services-list__item note">Оформление ипотек в ведущих банках г.Петрозаводск</li>
-                <li class="services-list__item search">Подбор недвижимости с учетом пожеланий покупателя</li>
+                <li class="services-list__item note">Оформление ипотеки в ведущих банках г.Петрозаводск</li>
+                <li class="services-list__item search search-mode">Подбор недвижимости <span class="search-mode">с учетом пожеланий покупателя</span></li>
                 <li class="services-list__item cheet">Юридическая экспертиза документов, предоставленных <br> продавцом по продаваемому обьекту недвижимости </li>
-                <li class="services-list__item key">Организация и проведение сделки купли-продажи <br>(от составления договоров до передачи ключей покупателям )</li>
+                <li class="services-list__item key">Организация и проведение сделки купли-продажи </li><span class="mobile-stroke">(от составления договоров до передачи ключей покупателям )</span>
               </ul>
-              <ul class="services-list__nav">
+              <ul class="services-list__nav services-list__nav--mod">
                 <li class="services-list__item note">Составление договоров купли-продажи недвижимости</li>
                 <li class="services-list__item calculate">Юридическое сопровождение сделки купли-продажи <br> обьектов недвижимости</li>
                 <li class="services-list__item doc">Срочный выкуп обьектов недвижимости</li>
@@ -144,7 +144,7 @@
                 </svg>
                 <div class="border"></div>
               </div>
-              <p>8 лет успешной работы <br>в сфере недвижимости</p>
+              <p>8 лет успешной работы в сфере недвижимости</p>
             </li>
             <li class="our-strength__item placeholder">
               <div class="container-icon">
