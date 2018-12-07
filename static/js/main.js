@@ -176,24 +176,24 @@ $(window).scroll(function() {
 
 
 
-// Read more...
-$(document).ready(function () {
-$(".content").hide();
+// // Read more...
+// $(document).ready(function () {
+// $(".content").hide();
 
-$(".toggle").on("click", function (e) {
+// $(".toggle").on("click", function (e) {
 		
-		var $this = $(this).prev('.content');
-		var $text = $(this);
-		$this.slideToggle('fast', function () {
-				if ($(this).is(':visible')) {
-						$text.text('Скрыть');
-				} else {
-						$text.text('Читать далее...');
-				}
-		});
+// 		var $this = $(this).prev('.content');
+// 		var $text = $(this);
+// 		$this.slideToggle('fast', function () {
+// 				if ($(this).is(':visible')) {
+// 						$text.text('Скрыть');
+// 				} else {
+// 						$text.text('Читать далее...');
+// 				}
+// 		});
 
-});
-});
+// });
+// });
 
 //Mobile-menu
 $(document).ready(function () {
@@ -288,43 +288,43 @@ for(let i = 0; i < input.length; i++){
 			input[i].value = '';
 }
 });
-$(function(){
-		$('#formID').validate({
-			rules:{
+// $(function(){
+// 		$('#formID').validate({
+// 			rules:{
 	
-				name:{
-						required: true,
-						minlength: 2,
-						maxlength: 30,
-				},
+// 				name:{
+// 						required: true,
+// 						minlength: 2,
+// 						maxlength: 30,
+// 				},
 	
-				phone:{
-						required: true,
-						minlength: 5,
-						maxlength: 30,
-				},
-				tema:{
-					required: true,
-					minlength: 6,
-					maxlength: 40,
-			}
-	 },
-		 messages: {
-			name: {
-			required: "Поле 'Имя' обязательно к заполнению",
-			minlength: "Введите не менее 2-х символов в поле 'Имя'"
-		},
-			phone: {
-			required: "Поле 'Телефон' обязателен к заполнению",
-			minlength: "Введите не менее 5-х символов в поле 'Телефон"
-			},
-			tema: {
-				required: "Опишите вашу задачу",
-				minlength: "Введите не менее 6-х символов в поле 'Тема"
-			},
-		 }
-		});
-	 }); 
+// 				phone:{
+// 						required: true,
+// 						minlength: 5,
+// 						maxlength: 30,
+// 				},
+// 				tema:{
+// 					required: true,
+// 					minlength: 6,
+// 					maxlength: 40,
+// 			}
+// 	 },
+// 		 messages: {
+// 			name: {
+// 			required: "Поле 'Имя' обязательно к заполнению",
+// 			minlength: "Введите не менее 2-х символов в поле 'Имя'"
+// 		},
+// 			phone: {
+// 			required: "Поле 'Телефон' обязателен к заполнению",
+// 			minlength: "Введите не менее 5-х символов в поле 'Телефон"
+// 			},
+// 			tema: {
+// 				required: "Опишите вашу задачу",
+// 				minlength: "Введите не менее 6-х символов в поле 'Тема"
+// 			},
+// 		 }
+// 		});
+// 	 }); 
 	
 	 $('.reviews-slider').slick( {
 		arrows: false, 
@@ -356,4 +356,10 @@ $(function(){
 				}
 		});
 	}); 
+}); 
+$(document).ready(function() {
+	$('#sub').click(function(){
+		$('#checkbox').trigger('click'); 
+			return false;
+	});
 });

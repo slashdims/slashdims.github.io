@@ -73,30 +73,21 @@
           <div class="header-logo header-logo--img"><img src="static/img/content/logo2.jpg" alt="logo"></div>
         </header>
       </div>
-      <div class="fullscreen-bg">
-        <div class="overlay-video">
-          <section class="section general" id="general">
-            <div class="container">
-              <div class="container-desc">
-                <div class="general-title">
-                  <h1 class="title">Желание выгодно купить или продать недвижимость?</h1>
-                </div>
-                <div class="general-desc">
-                  <p>Наша команда профессионалов исполнит Ваше желание в короткие сроки!</p>
-                </div>
-                <div class="general-desc__mobile">
-                  <p>Наша команда исполнит Ваше желание!</p>
-                </div><a class="general-button btn" href="#form-section"><span class="general-button__link">Оставить заявку</span></a>
-              </div>
+      <section class="section general" id="general">
+        <div class="container">
+          <div class="container-desc">
+            <div class="general-title">
+              <h1 class="title">Желание выгодно купить или продать недвижимость?</h1>
             </div>
-          </section>
+            <div class="general-desc">
+              <p>Наша команда профессионалов исполнит Ваше желание в короткие сроки!</p>
+            </div>
+            <div class="general-desc__mobile">
+              <p>Наша команда исполнит Ваше желание!</p>
+            </div><a class="general-button btn" href="#form-section"><span class="general-button__link">Оставить заявку</span></a>
+          </div>
         </div>
-        <div class="overlay-s"></div>
-        <video class="fullscreen-bg__video" loop="" muted="" autoplay="" poster="../../static/img/video/Boulevard.jpg">
-          <source src="../../static/img/video/Boulevard.mp4" type="video/mp4">
-          <source src="../../static/img/video/Boulevard.webm" type="video/webm">
-        </video>
-      </div>
+      </section>
       <section class="section our-services" id="services">
         <div class="our-services__left"></div>
         <div class="our-services__right">
@@ -153,7 +144,8 @@
                 </svg>
                 <div class="border"></div>
               </div>
-              <p>8 лет успешной работы в сфере недвижимости</p>
+              <p class="fix-world__sryline">8 лет успешной работы в сфере недвижимости</p>
+              <p class="fix-world__skyline--mod">8 лет успешной работы <br> в сфере недвижимости</p>
             </li>
             <li class="our-strength__item placeholder">
               <div class="container-icon">
@@ -173,13 +165,14 @@
               </div>
               <p>Мы действуем в интересах наших клиентов</p>
             </li>
-            <li class="our-strength__item contract mobile-resp">
+            <li class="our-strength__item contract">
               <div class="container-icon">
                 <svg class="icon icon-contract ">
                   <use xlink:href="static/img/svg/symbol/sprite.svg#contract"></use>
                 </svg>
                 <div class="border"></div>
               </div>
+              <div class="mobile-resp">У нас нет двойных <br> и скрытых комиссий</div>
               <div class="mobile-resp__text"><span>У нас нет двойных</span><span>и скрытых </span><span>комиссий</span></div>
             </li>
           </ul>
@@ -224,24 +217,32 @@
           <div class="mobile-slider">
             <div class="reviews-mobile__one">
               <h3 class="reviews-title">Таисия Дерюгина</h3>
-              <p>Обратилась в АН "Республика" по совету коллеги. Владимир - настоящий профессионал, умеет объяснить сложные вопросы простым языком! Искали сразу вариант в заданном бюджете.</p><span class="content">На все просмотры Владимир ездил со мной, объяснял юридические вопросы, готовил документы. Нервный и сложный процесс стал простым, понятным и спокойным! Удачи, успеха Вам! Огромное спасибо!</span><span class="toggle">Читать далее...</span>
+              <input class="read-more-state" id="post-1" type="checkbox">
+              <p class="read-more-wrap">Обратилась в АН "Республика" по совету коллеги. Владимир - настоящий профессионал, умеет объяснить сложные вопросы простым языком! Искали сразу вариант в заданном бюджете.<span class="read-more-target">На все просмотры Владимир ездил со мной, объяснял юридические вопросы, готовил документы. Нервный и сложный процесс стал простым, понятным и спокойным! Удачи, успеха Вам! Огромное спасибо!</span></p>
+              <label class="read-more-trigger toggle" for="post-1"></label>
             </div>
             <div class="reviews-mobile__two">
               <h3 class="reviews-title">Софья Харитонова</h3>
-              <p>
+              <input class="read-more-state" id="post-2" type="checkbox">
+              <p class="read-more-wrap">
                 Обратилась в АН «Республика» с целью продать квартиру
-                в кратчайшие сроки. Результат превзошел ожидания: квартиру продали за одну неделю, сделка организована прекрасно. 
-              </p><span class="content">
-                Огромное спасибо менеджеру Александре за четкую и слаженную работу. 
-                В дальнейшем буду обращаться только в АН «Республика».</span><span class="toggle">Читать далее...</span>
+                в кратчайшие сроки. Результат превзошел ожидания: квартиру продали за одну неделю, сделка организована прекрасно. <span class="read-more-target">
+                  Огромное спасибо менеджеру Александре за четкую и слаженную работу. 
+                  В дальнейшем буду обращаться только в АН «Республика».</span>
+              </p>
+              <label class="read-more-trigger toggle" for="post-2"></label>
             </div>
             <div class="reviews-mobile__three">
               <h3 class="reviews-title">Светлана Пахомова</h3>
-              <p>В связи с расширением состава семьи, решили продавать однокомнатную квартиру. Хорошие друзья посоветовали обратиться в агентство недвижимости «Республика».  </p><span class="content">Очень быстро приехал специалист, обговорили все нюансы по продаже. Поиск новой квартиры занял у нас несколько дней. Спасибо менеджеру Павлу.Большое спасибо агентству недвижимости «Республика»!</span><span class="toggle">Читать далее...</span>
+              <input class="read-more-state" id="post-3" type="checkbox">
+              <p class="read-more-wrap">В связи с расширением состава семьи, решили продавать однокомнатную квартиру. Хорошие друзья посоветовали обратиться в агентство недвижимости «Республика».  <span class="read-more-target">Очень быстро приехал специалист, обговорили все нюансы по продаже. Поиск новой квартиры занял у нас несколько дней. Спасибо менеджеру Павлу.Большое спасибо агентству недвижимости «Республика»!</span></p>
+              <label class="read-more-trigger toggle" for="post-3"></label>
             </div>
             <div class="reviews-mobile__four">
               <h3 class="reviews-title">Хартман</h3>
-              <p>Благодарим агенство "Республика" за помощь в серьёзном деле — продажа квартиры. Когда на протяжении месяца почти ежедневно квартиру смотрели по несколько семей   </p><span class="content">мы поняли, что имеем дело с профессионалами и были уверены, что скоро наш вежливый менеджер  Михаил, найдёт счастливца, который купит наше уютное жильё. Так и произошло!</span><span class="toggle">Читать далее...</span>
+              <input class="read-more-state" id="post-4" type="checkbox">
+              <p class="read-more-wrap">Благодарим агенство "Республика" за помощь в серьёзном деле — продажа квартиры. Когда на протяжении месяца почти ежедневно квартиру смотрели по несколько семей   <span class="read-more-target">мы поняли, что имеем дело с профессионалами и были уверены, что скоро наш вежливый менеджер  Михаил, найдёт счастливца, который купит наше уютное жильё. Так и произошло!</span></p>
+              <label class="read-more-trigger toggle" for="post-4"></label>
             </div>
           </div>
         </div>
@@ -265,12 +266,10 @@
               <label class="form-label">Тема заявки:</label>
               <input class="form-control" id="text" type="text" name="tema" placeholder="Тема заявки:" tabindex="3" required onKeyUp="if(/[^a-zA-Zа-яА-ЯёЁ .]/i.test(this.value)){this.value='';}">
             </div>
-            <div class="form-group form-group--checkbox">
-              <label class="form-label form-label--checkbox">
-                <input class="checkbox form-control" id="check" type="checkbox" name="form-check"><span class="checkbox-custom"></span><span class="label desctop">Даю свое согласие на обработку персональных данных</span><span class="label-mobile">Cогласие на обработку персональных данных</span>
-              </label>
-            </div>
             <button class="general-button general-button--mod"><span class="general-button__link">Отправить заявку</span></button>
+            <div class="form-conf">
+              <p>Нажимая на кнопку отправить заявку, я соглашаюсь на обработку моих персональных данных в соответствии<span> <a class="text-conf" href="../../static/img/content/docs.pdf" target="_blank">с целями обработки и политикой конфиденциальности</a></span></p>
+            </div>
           </form>
         </div>
         <div class="map__container"> 
