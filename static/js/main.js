@@ -371,11 +371,6 @@ $(window).resize(function () {
 	}
 });
 
-$(document).ready(function() {
-	setInterval(function(){ 
-		$("services-list--mobile").load(); 
-		}, 3000);
-});
 // $(document).ready(function(){
 
 // 	// Check if the current URL contains '#'
