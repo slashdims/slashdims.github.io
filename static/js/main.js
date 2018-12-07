@@ -357,9 +357,40 @@ for(let i = 0; i < input.length; i++){
 		});
 	}); 
 }); 
-$(document).ready(function() {
-	$('#sub').click(function(){
-		$('#checkbox').trigger('click'); 
-			return false;
-	});
+// $(document).ready(function() {
+// 	$('#sub').click(function(){
+// 		$('#checkbox').trigger('click'); 
+// 			return false;
+// 	});
+// });
+
+
+$(window).resize(function () {
+	if ($(window).width() > 320 && $(window).width() < 920) {
+		window.location.reload()
+	}
 });
+
+$(document).ready(function() {
+	setInterval(function(){ 
+		$("services-list--mobile").load(); 
+		}, 3000);
+});
+// $(document).ready(function(){
+
+// 	// Check if the current URL contains '#'
+// 	if(document.URL.indexOf("#")==-1)
+// 	{
+// 			// Set the URL to whatever it was plus "#".
+// 			url = document.URL+"#";
+// 			location = "#";
+
+// 			//Reload the page
+// 			 location.reload(true);
+// 	}
+// })
+
+
+// function timedRefresh(timeoutPeriod) {
+// 	setTimeout("location.reload(true);",timeoutPeriod);
+// }
